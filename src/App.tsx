@@ -17,7 +17,7 @@ const App = () => {
   ])
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen p-3">
       <RouterProvider router={router} />
     </div>
   )
