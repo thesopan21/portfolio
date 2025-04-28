@@ -6,6 +6,18 @@
 }
 
 
-.bg-background{
-  background-color: #212121;
+@layer base {
+
+  /* Custom utility classes */
+  .section-container {
+    @apply container px-4 py-16 md:py-24;
+  }
+
+  .device-frame {
+    @apply relative rounded-[2rem] p-2 shadow-lg border-4 overflow-hidden;
+  }
+
+  .device-screen {
+    @apply rounded-[1.5rem] overflow-hidden bg-white aspect-[9/19];
+  }
 }
