@@ -19,7 +19,7 @@ const Index = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
-          <div className="w-16 h-16 rounded-full border-4 border-primary border-t-transparent animate-spin mx-auto mb-4"></div>
+          <div className="w-10 h-10 rounded-full border-4 border-amber-300 border-t-transparent animate-spin mx-auto mb-4"></div>
           <h2 className="text-xl font-semibold">Loading Portfolio...</h2>
         </div>
       </div>

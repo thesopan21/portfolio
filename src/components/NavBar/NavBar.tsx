@@ -26,12 +26,12 @@ const NavBar = () => {
   return (
     <header
       className={`
-        fixed w-full z-50 transition-all duration-300 
+        fixed w-full z-50 transition-all duration-300 px-3
         ${isScrolled ? 'bg-background/90 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'}
       `}
     >
       <div className="container flex items-center justify-between">
-        <a href="#home" className="text-2xl font-bold text-primary">
+        <a href="#home" className="text-2xl font-bold">
           Sopan Bhere
         </a>
 
