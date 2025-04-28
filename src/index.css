@@ -18,6 +18,6 @@
   }
 
   .device-screen {
-    @apply rounded-[1.5rem] overflow-hidden bg-white aspect-[9/19];
+    @apply rounded-[1.2rem] overflow-hidden aspect-[9/19];
   }
 }
