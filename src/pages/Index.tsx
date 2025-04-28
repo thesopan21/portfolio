@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import NavBar from '../components/NavBar/NavBar';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +28,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      Index here you are pages
+      <NavBar />
     </div>
   )
 }
