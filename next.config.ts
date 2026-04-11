@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
   // =========================================================================
 
   // Enable React Compiler for automatic memoization (Next.js 15+)
-  reactCompiler: true,
+  // Requires: pnpm add babel-plugin-react-compiler
+  // reactCompiler: true,
 
   // Image optimization
   images: {
@@ -143,15 +144,14 @@ const nextConfig: NextConfig = {
   // TYPE CHECKING
   // =========================================================================
 
-  // TypeScript and ESLint during build
+  // TypeScript during build
   typescript: {
     // Set to true to skip type checking during build (not recommended)
     ignoreBuildErrors: false,
   },
-  eslint: {
-    // Set to true to skip ESLint during build (not recommended)
-    ignoreDuringBuilds: false,
-  },
+
+  // Note: ESLint configuration is no longer supported in next.config.ts
+  // Run ESLint separately: pnpm lint
 };
 
 export default nextConfig;
