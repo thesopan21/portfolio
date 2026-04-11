@@ -17,6 +17,16 @@ export const siteConfig = {
     github: "https://github.com/yourusername",
     linkedin: "https://linkedin.com/in/yourusername",
   },
+  keywords: [
+    "web developer",
+    "full-stack developer",
+    "react",
+    "next.js",
+    "typescript",
+    "portfolio",
+    "front-end developer",
+    "UI/UX",
+  ],
 } as const;
 
 export type SiteConfig = typeof siteConfig;
