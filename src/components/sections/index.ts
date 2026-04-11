@@ -1,6 +1,6 @@
 // Section Components - Barrel Export
 
-// export { Hero } from "./Hero";
+export { Hero } from "./Hero";
 // export { About } from "./About";
 // export { Projects } from "./Projects";
 // export { Experience } from "./Experience";
