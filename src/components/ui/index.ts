@@ -3,6 +3,7 @@
 
 export { Button } from "./Button";
 export { default as ThemeToggle } from "./ThemeToggle";
+export { ProjectCard } from "./ProjectCard";
 
 // Example exports (create these components as needed):
 // export { Card } from "./Card";
