@@ -2,6 +2,7 @@
 // Import all UI components here for easy access
 
 export { Button } from "./Button";
+export { default as ThemeToggle } from "./ThemeToggle";
 
 // Example exports (create these components as needed):
 // export { Card } from "./Card";
