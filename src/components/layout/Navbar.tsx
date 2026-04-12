@@ -43,33 +43,33 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-sticky transition-all duration-300",
           isScrolled
-            ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
-            : "bg-transparent"
+            ? "bg-[#0a0a0f]/90 backdrop-blur-md border-b border-white/10"
+            : "bg-[#0a0a0f]/80 backdrop-blur-sm"
         )}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex h-16 md:h-20 items-center justify-between">
             {/* Logo */}
             <Link
               href="/"
-              className="text-xl font-bold text-foreground hover:text-primary-600 transition-colors"
+              className="text-lg md:text-xl font-bold text-white hover:text-purple-400 transition-colors tracking-tight"
             >
               {siteConfig.name}
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8 lg:gap-12">
               {navigation.main.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors relative group",
-                    "text-neutral-600 hover:text-foreground dark:text-neutral-400 dark:hover:text-white"
+                    "text-xs font-medium transition-colors relative group tracking-wider",
+                    "text-gray-400 hover:text-white uppercase"
                   )}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full" />
                 </a>
               ))}
             </nav>

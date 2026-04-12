@@ -8,18 +8,18 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-900 dark:bg-neutral-950 text-white border-t border-neutral-800">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-[#0a0a0f] text-white border-t border-white/10">
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="inline-block text-2xl font-bold mb-4 hover:text-primary-400 transition-colors"
+              className="inline-block text-2xl font-bold mb-4 hover:text-purple-400 transition-colors"
             >
               {siteConfig.name}
             </Link>
-            <p className="text-neutral-400 mb-4 max-w-md">
+            <p className="text-gray-400 mb-4 max-w-md">
               {siteConfig.description}
             </p>
             <div className="flex gap-4">
@@ -32,8 +32,8 @@ export default function Footer() {
                   className="group relative"
                   aria-label={link.platform}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-neutral-800 hover:bg-neutral-700 flex items-center justify-center transition-colors">
-                    <span className="text-neutral-400 group-hover:text-white transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple-500/50 flex items-center justify-center transition-all backdrop-blur-sm">
+                    <span className="text-gray-400 group-hover:text-purple-400 transition-colors">
                       {getSocialIcon(link.platform)}
                     </span>
                   </div>
@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider mb-4 text-gray-500">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -52,7 +52,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-neutral-400 hover:text-white transition-colors inline-block"
+                    className="text-gray-400 hover:text-white transition-colors inline-block text-sm"
                   >
                     {item.name}
                   </a>
@@ -63,10 +63,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-wider mb-4 text-gray-500">
               Contact
             </h4>
-            <ul className="space-y-2 text-neutral-400">
+            <ul className="space-y-2 text-gray-400 text-sm">
               <li>
                 <a
                   href={`mailto:${siteConfig.author.email}`}
@@ -100,25 +100,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-neutral-800">
+        <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-neutral-400 text-sm text-center sm:text-left">
-              &copy; {currentYear} {siteConfig.author.name}. All rights
-              reserved.
+            <p className="text-gray-500 text-sm text-center sm:text-left">
+              &copy; {currentYear} {siteConfig.author.name}. Built with intentional restraint.
             </p>
-            <div className="flex gap-6 text-sm">
-              <a
-                href="/privacy"
-                className="text-neutral-400 hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms"
-                className="text-neutral-400 hover:text-white transition-colors"
-              >
-                Terms of Service
-              </a>
+            <div className="flex items-center gap-1 text-xs text-gray-500">
+              <span>GitHub</span>
+              <span className="mx-2">•</span>
+              <span>LinkedIn</span>
+              <span className="mx-2">•</span>
+              <span>Twitter</span>
             </div>
           </div>
         </div>

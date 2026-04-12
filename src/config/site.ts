@@ -2,13 +2,13 @@
 // Central place for site metadata and configuration
 
 export const siteConfig = {
-  name: "Your Portfolio Name",
-  title: "Portfolio | Your Name",
-  description: "Personal portfolio showcasing my work and experience",
+  name: "SAM.DEV",
+  title: "Sam - React Native Developer Portfolio",
+  description: "Building scalable, high-performance mobile apps with intentional restraint and architectural precision.",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   author: {
-    name: "Your Name",
-    email: "your.email@example.com",
+    name: "Sam",
+    email: "sam@sam.dev",
     github: "https://github.com/yourusername",
     linkedin: "https://linkedin.com/in/yourusername",
     twitter: "https://twitter.com/yourusername",
@@ -16,16 +16,17 @@ export const siteConfig = {
   links: {
     github: "https://github.com/yourusername",
     linkedin: "https://linkedin.com/in/yourusername",
+    twitter: "https://twitter.com/yourusername",
   },
   keywords: [
-    "web developer",
-    "full-stack developer",
-    "react",
-    "next.js",
+    "react native developer",
+    "mobile app developer",
+    "react developer",
     "typescript",
     "portfolio",
-    "front-end developer",
-    "UI/UX",
+    "iOS developer",
+    "Android developer",
+    "mobile development",
   ],
 } as const;
 
