@@ -57,7 +57,7 @@ export function Hero() {
                   React Native Developer
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                 Building scalable, high-performance mobile apps with intentional restraint and architectural precision.
               </p>
             </motion.div>
@@ -103,46 +103,6 @@ export function Hero() {
                   <HiArrowNarrowRight className="w-4 h-4" />
                 </motion.button>
               </Link>
-            </motion.div>
-
-            {/* Expertise Icons */}
-            <motion.div variants={createFadeVariant('up')} className="pt-8">
-              <div className="flex items-center gap-1">
-                <span className="text-xs font-medium text-gray-500 uppercase tracking-wider mr-4">
-                  Expertise
-                </span>
-                <div className="flex items-center gap-3">
-                  {/* React Icon */}
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/10 transition-colors">
-                    <svg className="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="currentColor">
-                      <circle cx="12" cy="12" r="2" />
-                      <ellipse cx="12" cy="12" rx="8" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                      <ellipse cx="12" cy="12" rx="8" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" transform="rotate(60 12 12)" />
-                      <ellipse cx="12" cy="12" rx="8" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" transform="rotate(120 12 12)" />
-                    </svg>
-                  </div>
-                  {/* Mobile Icon */}
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/10 transition-colors">
-                    <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="7" y="2" width="10" height="20" rx="2" ry="2" />
-                      <line x1="12" y1="18" x2="12" y2="18" />
-                    </svg>
-                  </div>
-                  {/* Lightning Icon */}
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/10 transition-colors">
-                    <svg className="w-4 h-4 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" />
-                    </svg>
-                  </div>
-                  {/* Code Icon */}
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/10 transition-colors">
-                    <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <polyline points="16 18 22 12 16 6" />
-                      <polyline points="8 6 2 12 8 18" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
 
@@ -208,32 +168,6 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom Section - Crafted Experiences */}
-        <motion.div
-          variants={createFadeVariant('up')}
-          className="mt-20 md:mt-32"
-        >
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <div className="max-w-md">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">
-                Crafted Experiences
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                Selected mobile applications focusing on seamless interaction and robust engineering.
-              </p>
-            </div>
-            <Link href="/#projects">
-              <motion.button
-                whileHover={hoverScale}
-                className="flex items-center gap-2 text-white hover:text-purple-400 transition-colors group"
-              >
-                <span className="font-medium">Explore Portfolio</span>
-                <HiArrowNarrowRight className="w-5 h-5 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
-              </motion.button>
-            </Link>
-          </div>
-        </motion.div>
       </motion.div>
 
       {/* Scroll Indicator */}

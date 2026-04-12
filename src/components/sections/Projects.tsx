@@ -55,7 +55,7 @@ export function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={scrollViewport}
-          className="max-w-3xl mb-16"
+          className=" mb-16"
         >
           <motion.div variants={fadeInUp} className="inline-block mb-4">
             <span className="px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-300 text-xs font-medium border border-purple-500/20 uppercase tracking-wider">
