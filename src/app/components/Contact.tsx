@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Mail, MapPin, Send } from 'lucide-react';
 
+export const myEmail = 'sam21sop@gmail.com';
+
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -40,8 +42,8 @@ export function Contact() {
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail size={20} />
-                <a href="mailto:ssm21sep@gmail.com" className="hover:text-foreground transition-colors">
-                  sam21sep@gmail.com
+                <a href={myEmail} className="hover:text-foreground transition-colors">
+                  {myEmail}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
