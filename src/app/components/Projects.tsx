@@ -1,8 +1,11 @@
+import monovaImage from '../../assets/monova.png';
+import flickdImage from '../../assets/flickd.webp';
+
 const projects = [
   {
     title: 'Monova AI Apps',
     description: 'AI-driven personal styling platform providing real-time, tailored outfit curation and digital wardrobe management. Built with React Native, TypeScript, and Redux Toolkit, integrating advanced AI APIs for personalized styling recommendations and seamless user experiences.',
-    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: monovaImage,
     tags: ['React Native', 'TypeScript', 'Redux Toolkit', 'AI APIs', 'React Native Paper', 'Mixpanel', 'Crashlytics'],
     period: 'Jul 2025 - Present',
     link: 'https://link.monova.in/download-app',
@@ -12,7 +15,7 @@ const projects = [
   {
     title: 'Flickd Social Platform',
     description: 'Mobile-first social commerce platform with dynamic media feeds, real-time updates, and optimized rendering. Engineered scalable video streaming pipelines, e-commerce features, and secure payment gateway integration for seamless social shopping experiences.',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    image: flickdImage,
     tags: ['React Native', 'Video Streaming', 'E-commerce', 'Razorpay', 'WebSockets', 'REST APIs', 'React Native Video'],
     period: 'Jul 2024 - Jul 2025',
     link: 'https://www.flickd.in/downloads',
@@ -41,7 +44,7 @@ export function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 min-h-[250px] md:min-h-[350px] rounded-xl"
+                    className="w-full h-full rounded-xl object-contain hover:scale-110 transition-transform duration-500 min-h-[250px] md:min-h-[350px]"
                   />
                 </div>
 
