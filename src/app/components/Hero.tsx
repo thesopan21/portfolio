@@ -41,7 +41,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-t from-amber-200/30 via-transparent to-amber-100/20">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-5xl md:text-7xl mb-6">
           Hi, I'm{' '}
