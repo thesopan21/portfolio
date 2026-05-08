@@ -45,9 +45,13 @@ export function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-5xl md:text-7xl mb-6">
           Hi, I'm{' '}
-          <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-transparent font-bold">
-            {displayText}
-            <span className="animate-pulse">|</span>
+          <span className="font-bold">
+            <span className="bg-gradient-to-l from-amber-600 via-amber-500 to-yellow-400 bg-clip-text text-transparent">
+              {displayText}
+            </span>
+            {displayText.length > 0 && (
+              <span className="text-black animate-pulse">|</span>
+            )}
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
