@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "rebuild": "pnpm clean && pnpm build",
-    "deploy": "firebase deploy --only hosting",
+    "deploy": "firebase deploy",
     "deploy:prod": "pnpm rebuild && pnpm deploy"
   },
   "dependencies": {
