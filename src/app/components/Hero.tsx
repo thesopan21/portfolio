@@ -77,10 +77,10 @@ export function Hero() {
       </div>
       <button
         onClick={() => scrollToSection('about')}
-        className="absolute bottom-8 animate-bounce opacity-50 hover:opacity-100 transition-opacity"
+        className="absolute bottom-8 animate-bounce p-3 rounded-full bg-gradient-to-br from-yellow-500 via-amber-600 to-yellow-500 text-white shadow-lg shadow-amber-500/40 hover:shadow-xl hover:shadow-amber-500/60 hover:scale-110 transition-all duration-300 ring-2 ring-amber-400/30"
         aria-label="Scroll to about section"
       >
-        <ArrowDown size={24} />
+        <ArrowDown size={24} className="drop-shadow-md" />
       </button>
     </section>
   );
