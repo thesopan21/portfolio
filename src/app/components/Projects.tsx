@@ -1,85 +1,107 @@
 const projects = [
   {
-    title: 'Monova AI - React Native App',
-    description: 'Built and launched React Native application with AI-powered tools. Developed interactive rich-text editor with integrated AI APIs for text, image, and video generation. Implemented performance optimizations and custom animations.',
-    image: 'https://images.unsplash.com/photo-1677039460055-954e9054452b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    tags: ['React Native', 'TypeScript', 'Redux Toolkit', 'AI APIs'],
+    title: 'Monova AI Apps',
+    description: 'AI-driven personal styling platform providing real-time, tailored outfit curation and digital wardrobe management. Built with React Native, TypeScript, and Redux Toolkit, integrating advanced AI APIs for personalized styling recommendations and seamless user experiences.',
+    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    tags: ['React Native', 'TypeScript', 'Redux Toolkit', 'AI APIs', 'React Native Paper', 'Mixpanel', 'Crashlytics'],
     period: 'Jul 2025 - Present',
+    link: 'https://link.monova.in/download-app',
+    status: 'Production',
+    challenges: 'Optimized AI API response times by implementing efficient caching strategies. Resolved complex state management issues with Redux Toolkit for real-time outfit updates. Handled image optimization and CDN integration for faster wardrobe rendering.',
   },
   {
-    title: 'Production Monitoring Dashboard',
-    description: 'Integrated analytics and monitoring tools (Mixpanel & Crashlytics) to track user behavior, improve product decisions, and monitor production issues for data-driven development.',
-    image: 'https://images.unsplash.com/photo-1679466956264-d020204609ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    tags: ['Mixpanel', 'Crashlytics', 'Analytics'],
-    period: 'Jul 2025 - Present',
-  },
-  {
-    title: 'Custom UI/UX Components',
-    description: 'Designed and implemented UI/UX with custom animations, navigation flows, and optimized image rendering. Improved overall UI responsiveness by leveraging CDN-based delivery and efficient caching techniques.',
-    image: 'https://images.unsplash.com/photo-1679379121062-91bcf75dcfaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    tags: ['React Native Paper', 'Animations', 'CDN'],
-    period: 'Jul 2025 - Present',
-  },
-  {
-    title: 'Flekd - E-commerce Mobile App',
-    description: 'Engineered scalable video streaming and upload pipeline with React Native Video. Developed end-to-end social commerce features including product listing, shopping cart, and creator-driven experiences.',
-    image: 'https://images.unsplash.com/photo-1677439283162-79114d6c84c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    tags: ['React Native', 'Video Streaming', 'E-commerce'],
+    title: 'Flickd Social Platform',
+    description: 'Mobile-first social commerce platform with dynamic media feeds, real-time updates, and optimized rendering. Engineered scalable video streaming pipelines, e-commerce features, and secure payment gateway integration for seamless social shopping experiences.',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    tags: ['React Native', 'Video Streaming', 'E-commerce', 'Razorpay', 'WebSockets', 'REST APIs', 'React Native Video'],
     period: 'Jul 2024 - Jul 2025',
-  },
-  {
-    title: 'Payment Gateway Integration',
-    description: 'Implemented secure Razorpay payment gateway integration with seamless checkout experience. Handled order lifecycle, transaction verification, and failure handling for high reliability in production.',
-    image: 'https://images.unsplash.com/photo-1677039460059-56670d026f68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    tags: ['Razorpay', 'Payment Gateway', 'TypeScript'],
-    period: 'Jul 2024 - Jul 2025',
-  },
-  {
-    title: 'Real-time Notifications System',
-    description: 'Built real-time content feeds and notifications using WebSockets and push notification services. Integrated REST APIs with robust error handling and fallback mechanisms for production reliability.',
-    image: 'https://images.unsplash.com/photo-1676030788890-08b6a1cb11ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    tags: ['WebSockets', 'Push Notifications', 'REST APIs'],
-    period: 'Jul 2024 - Jul 2025',
+    link: 'https://www.flickd.in/downloads',
+    status: 'Production',
+    challenges: 'Architected scalable video streaming pipeline handling 10K+ concurrent users. Debugged memory leaks in video playback with efficient cleanup. Integrated Razorpay payment gateway with robust error handling and transaction verification for production reliability.',
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="min-h-screen px-6 py-20 bg-muted/30">
+    <section id="projects" className="min-h-screen px-6 py-20 bg-gradient-to-b from-amber-50/20 via-transparent to-transparent">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl mb-12">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+        <div className="space-y-12">
+          {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow"
+              className={`rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:scale-[1.01] overflow-hidden ${index === 0
+                ? 'bg-gradient-to-br from-amber-900/20 via-amber-800/10 to-amber-900/20 border-amber-700/20 hover:shadow-xl hover:shadow-amber-500/20'
+                : 'bg-gradient-to-br from-slate-700/20 via-slate-600/10 to-slate-700/20 border-amber-700/20 hover:shadow-xl hover:shadow-slate-500/20'
+                }`}
             >
-              <div className="aspect-video overflow-hidden bg-muted">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl">{project.title}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
-                    {project.period}
-                  </span>
+              <div className="flex flex-col md:flex-row">
+                {/* Image Section */}
+                <div className="md:w-[28%] overflow-hidden bg-muted p-6">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 min-h-[250px] md:min-h-[350px] rounded-xl"
+                  />
                 </div>
-                <p className="text-muted-foreground mb-4 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-3 py-1 bg-muted rounded-full"
+
+                {/* Content Section */}
+                <div className="md:w-[72%] p-8 space-y-5">
+                  {/* Header with Title, Status, Download Button */}
+                  <div className="flex flex-wrap items-start justify-between gap-4">
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <h3 className="text-2xl md:text-3xl font-semibold text-foreground">{project.title}</h3>
+                      <span className="inline-block px-3 py-1 text-xs bg-amber-600/20 text-amber-600 rounded-full border border-amber-600/30 font-medium">
+                        {project.status}
+                      </span>
+                    </div>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-600 to-yellow-500 text-white text-sm font-medium rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-amber-500/50 transition-all duration-300"
                     >
-                      {tag}
+                      Download
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack Tags */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-foreground mb-3">Tech Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1.5 bg-muted/60 rounded-lg border border-border/50 font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Challenges */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Key Challenges & Solutions</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.challenges}
+                    </p>
+                  </div>
+
+                  {/* Period */}
+                  <div className="pt-2">
+                    <span className="text-xs text-muted-foreground font-medium">
+                      {project.period}
                     </span>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
