@@ -60,15 +60,18 @@ export function Hero() {
         <div className="flex gap-4 justify-center flex-wrap">
           <button
             onClick={() => scrollToSection('projects')}
-            className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+            className="group relative px-8 py-3.5 bg-gradient-to-br from-amber-900/40 via-amber-800/30 to-amber-900/40  rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(251,191,36,0.3)] backdrop-blur-sm border border-amber-700/30 shadow-[inset_0_1px_0_0_rgba(251,191,36,0.1)]"
           >
-            View My Work
+            <span className="relative z-10 drop-shadow-sm text-white">View My Work</span>
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-700/50 via-amber-600/40 to-amber-700/50 opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.1)]"></div>
           </button>
           <button
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-3 border border-border rounded-lg hover:bg-muted transition-colors"
+            className="relative px-8 py-3.5 bg-gradient-to-br from-slate-700/40 via-slate-600/30 to-slate-700/40 rounded-xl overflow-hidden backdrop-blur-xs border border-amber-700/20 hover:border-amber-600/40 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(251,191,36,0.2)] shadow-[inset_0_1px_0_0_rgba(251,191,36,0.08)]"
           >
-            Get In Touch
+            <span className="relative z-10 drop-shadow-sm text-black">Get In Touch</span>
+            <div className="absolute inset-0 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.3)]"></div>
           </button>
         </div>
       </div>
