@@ -1,3 +1,25 @@
+const skills = [
+  'React Native',
+  'TypeScript',
+  'JavaScript',
+  'Redux Toolkit',
+  'RTK Query',
+  'Push Notifications',
+  'Deep Linking',
+  'Mixpanel',
+  'Crashlytics',
+  'Razorpay',
+  'Git',
+  'GitHub',
+  'Expo',
+  'EAS Build',
+  'OTA Updates',
+  'Android Studio',
+  'Xcode',
+  'Postman',
+  'Figma'
+];
+
 export function About() {
   return (
     <section id="about" className="min-h-screen flex items-center px-6 py-20 bg-gradient-to-br from-slate-900/5 via-amber-100/10 to-slate-900/5 relative overflow-hidden">
@@ -13,27 +35,7 @@ export function About() {
           <div className="pt-8">
             <h3 className="text-xl mb-4 text-foreground">Skills & Technologies</h3>
             <div className="flex flex-wrap gap-3">
-              {[
-                'React Native',
-                'TypeScript',
-                'JavaScript',
-                'Redux Toolkit',
-                'RTK Query',
-                'Push Notifications',
-                'Deep Linking',
-                'Mixpanel',
-                'Crashlytics',
-                'Razorpay',
-                'Git',
-                'GitHub',
-                'Expo',
-                'EAS Build',
-                'OTA Updates',
-                'Android Studio',
-                'Xcode',
-                'Postman',
-                'Figma'
-              ].map((skill) => (
+              {skills.map((skill) => (
                 <span
                   key={skill}
                   className="px-4 py-2 bg-muted rounded-full text-sm"
